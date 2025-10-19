@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的作品集</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- 自訂 CSS（選用） -->
+  <style>
+    /* 你可以在這裡加入自訂樣式 */
+    /* 卡片互動 */
+    .card {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+    /* 卡片內的縮圖在 hover 時微放大 */
+    .card .ratio img {
+      transition: transform .25s ease;
+      will-change: transform;
+    }
+    .card:hover .ratio img {
+      transform: scale(1.05);
+    }
+
+    /* 鍵盤可及性：focus 時也有高亮（非滑鼠使用者） */
+    .card:focus-within {
+      outline: 2px solid #0d6efd; /* Bootstrap 主色 */
+      outline-offset: 2px;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(13,110,253,.25);
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. 導航列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- 請自行完成 -->
+     <div class="container">
+        <a class="navbar-brand" href="#">利蓁琳</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">技能</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">作品</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+        <!-- 繼續完成其他選項 -->
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="py-5">
+    <div class="container">
+      <!-- 請自行完成 -->
+       <h1 class="display-4 fw-bold mb-3">介紹</h1>
+       <p  class="lead text-muted mb-4">我是淡江資管系的學生，今年大三<br>歡迎來到我的網頁</p>
+       <div class="d-flex gap-2 flex-wrap">
+        <a href="#portfolio" class="btn btn-primary btn-lg">看作品</a>
+        <a href="#contact" class="btn btn-outline-primary btn-lg">聯絡我</a>
+       </div>
+    </div>
+  </section>
+
+  <!-- 3. 關於我 -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">關於我</h2>
+      <div class="row align-items-center">
+        <!-- 請自行完成：使用 col-md-6 建立兩欄 -->
+        <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img    
+                src="image.jpg" 
+                alt="照片"
+                class="img-fluid rounded-circle shadow"
+                style="max-width: 260px;"
+            />
+        </div>
+        <div class="col-md-6 text-center text-md-start">
+            <h3 class="fw-bold mb-3">我是利蓁琳</h3>
+            <p class="fs-5 text-muted lh-lg">
+            正在學習前端網頁設計與app設計，擅長把需求轉成清楚的介面與流程，並持續精進
+            Bootstrap／JavaScript／PHP 的實作能力
+            </p>
+        </div>
+    </div>
+  </section>
+
+  <!-- 4. 技能展示 -->
+  <section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">我的技能</h2>
+
+    <div class="row">
+      <!-- 前端 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="display-4 mb-2"><i class="bi bi-window-sidebar"></i></div>
+          <h5 class="fw-semibold">前端開發</h5>
+          <p class="text-muted mb-3">RWD 版面、互動元件與乾淨的介面設計。</p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <span class="badge text-bg-primary">HTML</span>
+            <span class="badge text-bg-primary">CSS</span>
+            <span class="badge text-bg-primary">Bootstrap 5</span>
+            <span class="badge text-bg-secondary">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 後端 / API -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="display-4 mb-2"><i class="bi bi-braces"></i></div>
+          <h5 class="fw-semibold">後端 / API</h5>
+          <p class="text-muted mb-3">表單處理、登入流程與 RESTful API 串接。</p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <span class="badge text-bg-secondary">PHP</span>
+            <span class="badge text-bg-secondary">REST</span>
+            <span class="badge text-bg-secondary">JSON</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 資料庫 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="display-4 mb-2"><i class="bi bi-database"></i></div>
+          <h5 class="fw-semibold">資料庫 & SQL</h5>
+          <p class="text-muted mb-3">資料表設計、關聯與基本查詢最佳化。</p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <span class="badge text-bg-success">MySQL</span>
+            <span class="badge text-bg-success">ERD</span>
+            <span class="badge text-bg-success">Index</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 5. 作品集 -->
+  <section id="portfolio" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">作品集</h2>
+      <div class="row">
+        <!-- 請自行完成：至少 6 個作品項目 -->
+          <!-- 專案 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="首頁咖啡圖片.jfif" class="img-fluid" style="object-fit:cover;" alt="咖啡廳形象頁" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">咖啡廳形象頁</h5>
+                <p class="card-text text-muted">品牌故事、菜單展示與地圖導覽。</p>
+                <a href="412630096-1/index.html" class="btn btn-outline-success btn-sm">查看詳情</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 專案 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="波妞.jpg" class="img-fluid" style="object-fit:cover;" alt="崖上的波妞主題頁" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">崖上的波妞主題頁</h5>
+                <p class="card-text text-muted">角色介紹與小遊戲互動頁面。</p>
+                <a href="412630096-2/index.php" class="btn btn-outline-secondary btn-sm">查看詳情</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 專案 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="莓果歐蕾.jpg" class="img-fluid" style="object-fit:cover;" alt="飲料訂購網站" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">飲料訂購網站</h5>
+                <p class="card-text text-muted">購物車、下單流程與訂單狀態頁。</p>
+                <a href="第02組/index.php" class="btn btn-primary btn-sm">查看詳情</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 聯絡表單 -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">聯絡我</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form>
+            <!-- 請自行完成表單欄位 -->
+             <div class="mb-3">
+              <label for="name" class="form-label">姓名</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="請輸入您的姓名" required>
+            </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">主旨</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="想聊的主題" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">訊息</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="請輸入訊息內容…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">送出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <!-- 請自行完成 -->
+     <div class="container">
+    <!-- 社群媒體 -->
+    <div class="d-flex justify-content-center gap-3 mb-3">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-white fs-4" aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-white fs-4" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noopener" class="text-white fs-4" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="mailto:you@example.com" class="text-white fs-4" aria-label="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+
+    <!-- 版權資訊 -->
+    <small class="d-block">© 2025 利蓁琳. All rights reserved.</small>
+  </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

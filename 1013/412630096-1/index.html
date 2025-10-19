@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        /* 全局背景設定 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f1e8; /* 柔和咖啡色背景，讓整體看起來更和諧 */
+        }
+
+        /* 導覽列樣式 */
+        nav ul {
+            list-style-type: none; /* 去除項目符號 */
+            padding: 0; /* 內邊距設為 0 */
+            text-align: center; /* 將列表內容置中 */
+            margin: 20px 0; /* 上下留白 20px */
+        }
+
+        nav ul li {
+            display: inline; /* 水平排列列表項目 */
+            margin: 0 15px; /* 左右邊距 15px，保持距離 */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* 去除超連結的底線 */
+            color: #5a4636; /* 超連結文字顏色，深咖啡色 */
+            font-size: 1.2em; /* 調整字體大小 */
+        }
+
+        nav ul li a:hover {
+            color: #8b5e3c; /* 滑鼠移過時超連結變成深咖啡色 */
+        }
+
+        /* 主圖片樣式 */
+        .main-image {
+            display: block; /* 設定圖片為區塊元素 */
+            margin: 20px auto; /* 上下留白 20px，左右自動置中 */
+            width: 80%; /* 設定圖片寬度為80% */
+            max-width: 600px; /* 最大寬度 600px，防止圖片過大 */
+        }
+
+        /* 區塊樣式，讓背景透明，增加整體感 */
+        .section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: transparent; /* 設置透明背景，避免背景一塊一塊 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 產品區樣式 */
+        .product-row, .product-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            overflow-x: auto; /* 過多時可以橫向滾動 */
+            padding: 10px 0;
+        }
+
+        /* 單一產品卡片樣式 */
+        .product-item {
+            flex: 1 1 auto;
+            min-width: 200px;
+            max-width: 250px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: 250px; 
+            object-fit: cover; /* 保持圖片比例並填滿框架 */
+            border-radius: 8px;
+        }
+        .product-item h3 {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        .product-item p {
+            color: #777;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .product-item .price {
+            font-size: 1.2em;
+            color: #c24e3a;
+            font-weight: bold;
+        }
+
+        /* 區分季節新品與特價區標題顏色 */
+        .seasonal .section-title {
+            color: #e89542;
+        }
+        .discount .section-title {
+            color: #8ec16f;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="about.html">關於</a></li>
+            <li><a href="Brand/brand.html">品牌故事</a></li>
+            <li><a href="Menu/menu.html">菜單</a></li>
+            <li><a href="Member/member.html">會員專區</a></li>
+        </ul>
+    </nav>
+    <img src="首頁咖啡圖片.jfif" alt="咖啡廳" class="main-image">
+
+    <!-- 季節新品區 -->
+    <section class="section seasonal">
+        <h1 class="section-title">季節限定口味</h1>
+        <div class="product-row">
+            <div class="product-item">
+                <img src="南瓜香料拿鐵.jpg" alt="南瓜香料拿鐵">
+                <h3>南瓜香料拿鐵</h3>
+                <p>經典秋季風味，香濃南瓜和溫暖香料的完美結合</p>
+                <p class="price">$150</p>
+            </div>
+            <div class="product-item">
+                <img src="薑餅摩卡.jpg" alt="薑餅摩卡">
+                <h3>薑餅摩卡</h3>
+                <p>濃郁巧克力與薑餅香氣，暖心冬季特調</p>
+                <p class="price">$160</p>
+            </div>
+            <div class="product-item">
+                <img src="薄荷巧克力冷翠.jpg" alt="薄荷巧克力冷萃">
+                <h3>薄荷巧克力冷萃</h3>
+                <p>清涼薄荷巧克力風味，夏季清爽解渴的好選擇</p>
+                <p class="price">$140</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特價區 -->
+    <section class="section discount">
+        <h1 class="section-title">特價優惠</h1>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="焦糖瑪奇朵.jpg" alt="焦糖瑪奇朵">
+                <h3>焦糖瑪奇朵</h3>
+                <p>經典焦糖風味搭配絲滑奶泡，限時特價</p>
+                <p class="price">$120 <del>$150</del></p>
+            </div>
+            <div class="product-item">
+                <img src="香草拿鐵.jfif" alt="香草拿鐵">
+                <h3>香草拿鐵</h3>
+                <p>香濃香草風味與咖啡的完美融合，享受舒適片刻</p>
+                <p class="price">$100 <del>$130</del></p>
+            </div>
+            <div class="product-item">
+                <img src="抹茶拿鐵.jpg" alt="冰抹茶拿鐵">
+                <h3>冰抹茶拿鐵</h3>
+                <p>清香抹茶和順滑牛奶，夏季清涼推薦飲品</p>
+                <p class="price">$90 <del>$120</del></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

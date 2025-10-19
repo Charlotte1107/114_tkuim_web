@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>宗介角色遊戲區</title>
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f0f8ff;
+			color: #333;
+		}
+		nav {
+			background-color: #4682B4;
+			padding: 10px 0;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		nav a {
+			color: white;
+			margin: 0 15px;
+			text-decoration: none;
+			font-size: 16px;
+		}
+		nav a:hover {
+			text-decoration: underline;
+		}
+		.container {
+			max-width: 800px;
+			margin: 20px auto;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.9);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		h2 {
+			color: #2E8B57;
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		p {
+			line-height: 1.6;
+		}
+		a {
+			color: #4682B4;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		ol {
+			list-style-type: decimal;
+			padding-left: 20px;
+		}
+		li {
+			margin-bottom: 20px;
+		}
+		button {
+			border: none;
+			background: none;
+			cursor: pointer;
+		}
+		button img {
+			border-radius: 10px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			transition: transform 0.2s ease;
+		}
+		button img:hover {
+			transform: scale(1.1);
+		}
+		input[type="number"], input[type="radio"] {
+			margin-right: 10px;
+		}
+		.form-actions {
+			margin-top: 20px;
+			text-align: center;
+		}
+		button[type="submit"] {
+			background-color: #4682B4;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button[type="submit"]:hover {
+			background-color: #2E8B57;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="index.php">首頁</a>
+		<a href="5.php">關於</a>
+		<a href="1.html">註冊會員</a>
+		<a href="3.php">藤本介紹</a>
+		<a href="4.php">波妞介紹</a>
+	</nav>
+
+	<div class="container">
+		<h2>宗介角色介紹</h2>
+		<p>保育園「向日葵園」的5歲男孩。心胸寬廣又耿直，在懸崖下遇見波妞並決心要保護她，到最後則喜歡上她。
+		以名字來稱呼自己的父母（理莎、耕一）。
+		年齡雖僅5歲，但已能懂得如何發送摩斯電碼。</p>
+
+		<h2>更多宗介相關介紹</h2>
+		<p><a href="https://www.google.com/search?q=宗介">進一步查詢宗介的資料</a></p>
+
+		<h2>與宗介一起玩遊戲吧</h2>
+		<form action="2.php" method="post" >
+			<ol>
+				<li>
+					<h3>猜拳遊戲</h3>
+					<p>請選擇你的出拳：</p>
+					<button type="submit" name="user_choice" value="1">
+						<img src="scissors.png" alt="剪刀" width="100">
+					</button>
+					<button type="submit" name="user_choice" value="2">
+						<img src="stone.png" alt="石頭" width="100">
+					</button>
+					<button type="submit" name="user_choice" value="3">
+						<img src="paper.png" alt="布" width="100">
+					</button>
+				</li>
+				<li>
+					<h3>猜數字遊戲</h3>
+					<p>宗介心中有一個1到10的數字，你能猜中嗎？</p>
+					<input type="number" name="guess" min="1" max="10">
+					<button type="submit" name="game" value="guess_number">開始遊戲</button>
+				</li>
+				<li>
+					<h3>擲骰子遊戲</h3>
+					<p>請選擇比賽規則：</p>        
+					<input type="radio" name="rule" value="high"> 比大
+					<input type="radio" name="rule" value="low"> 比小
+					<button type="submit" name="game" value="dice_game">開始擲骰子</button>
+				</li>
+			</ol>
+		</form>
+	</div>
+</body>
+</html>

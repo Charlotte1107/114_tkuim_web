@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜單</title>
+    <style>
+        /* 全局背景設定 */
+        body {
+            font-family: Arial, sans-serif; /* 設定字體 */
+            margin: 0; /* 去除外邊距 */
+            padding: 0; /* 去除內邊距 */
+            background-color: #f8f1e8; /* 柔和咖啡色背景 */
+            color: #5a4636; /* 深咖啡色字體 */
+        }
+
+        /* 標題樣式 */
+        .menu-title {
+            text-align: center; /* 文字置中 */
+            margin-top: 20px; /* 上邊距 */
+            font-size: 2em; /* 調整字體大小 */
+            color: #8b5e3c; /* 標題顏色 */
+        }
+
+        /* 每個分類區域樣式 */
+        .category {
+            max-width: 1000px; /* 設置最大寬度 */
+            margin: 20px auto; /* 自動置中 */
+            padding: 20px; /* 內邊距 */
+            background-color: #fff; /* 白色背景 */
+            border-radius: 10px; /* 圓角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+        }
+
+        /* 每個分類標題樣式 */
+        .category h2 {
+            text-align: center; /* 置中 */
+            color: #e89542; /* 橘色標題 */
+            font-size: 1.5em; /* 標題字體大小 */
+            margin-bottom: 15px; /* 下邊距 */
+        }
+
+        .menu-link {
+            text-decoration: none; /* 去除下劃線 */
+            color: inherit; /* 繼承父元素的顏色 */
+        }
+
+        .menu-link:hover {
+            color: #e89542; /* 當滑鼠懸停時顏色變化 */
+        }
+
+        /* 菜單項目列表樣式 */
+        .menu-item {
+            display: flex; /* 使用 flex 讓圖片與文字並排 */
+            align-items: center; /* 垂直置中 */
+            margin: 10px 0; /* 上下邊距 */
+            padding: 10px; /* 內邊距 */
+            border-bottom: 1px solid #ddd; /* 底部邊框 */
+        }
+
+        .menu-item img {
+            width: 80px; /* 圖片寬度 */
+            height: 80px; /* 圖片高度 */
+            border-radius: 55%; /* 圓形圖片 */
+            margin-right: 15px; /* 右邊距 */
+            object-fit: cover; /* 裁剪圖片保持比例 */
+        }
+
+        /* 菜單項目的文字區域 */
+        .menu-item-details {
+            flex: 1; /* 占滿剩餘空間 */
+        }
+
+        .menu-item-title {
+            font-size: 1.1em; /* 標題字體大小 */
+            color: #555; /* 深色字體 */
+            margin: 0; /* 去除邊距 */
+        }
+
+        .menu-item-description {
+            font-size: 0.9em; /* 描述字體大小 */
+            color: #777; /* 灰色字體 */
+            margin: 5px 0; /* 上下邊距 */
+        }
+
+        .menu-item-price {
+            font-size: 1em; /* 價格字體大小 */
+            color: #c24e3a; /* 紅棕色 */
+            font-weight: bold; /* 粗體 */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="menu-title">菜單</h1>
+
+    <!-- 飲料區 -->
+    <section class="category">
+        <h2><a href="Coffee/coffee.html" class="menu-link">飲料</a></h2>
+        <div class="menu-item">
+            <img src="../薄荷巧克力冷翠.jpg" alt="薄荷巧克力冷萃">
+            <div class="menu-item-details">
+                <p class="menu-item-title">薄荷巧克力冷翠</p>
+                <p class="menu-item-description">清涼薄荷巧克力風味，夏季清爽解渴的好選擇</p>
+                <p class="menu-item-price">$140</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="水果茶.jpg" alt="水果茶">
+            <div class="menu-item-details">
+                <p class="menu-item-title">水果茶</p>
+                <p class="menu-item-description">清爽水果香氣，解渴又美味</p>
+                <p class="menu-item-price">$120</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="氣泡水.jpg" alt="氣泡水">
+            <div class="menu-item-details">
+                <p class="menu-item-title">氣泡水</p>
+                <p class="menu-item-description">帶有檸檬和薄荷的清新氣泡水</p>
+                <p class="menu-item-price">$90</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 咖啡區 -->
+    <section class="category">
+        <h2><a href="Coffee/coffee.html" class="menu-link">咖啡</a></h2>
+        <div class="menu-item">
+            <img src="../香草拿鐵.jfif" alt="香草拿鐵">
+            <div class="menu-item-details">
+                <p class="menu-item-title">香草拿鐵</p>
+                <p class="menu-item-description">香濃香草風味與咖啡的完美融合，享受舒適片刻</p>
+                <p class="menu-item-price">NT$100</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="../抹茶拿鐵.jpg" alt="冰抹茶拿鐵">
+            <div class="menu-item-details">
+                <p class="menu-item-title">冰抹茶拿鐵</p>
+                <p class="menu-item-description">清香抹茶和順滑牛奶，夏季清涼推薦飲品</p>
+                <p class="menu-item-price">$90</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="../焦糖瑪奇朵.jpg" alt="焦糖瑪奇朵">
+            <div class="menu-item-details">
+                <p class="menu-item-title">焦糖瑪奇朵</p>
+                <p class="menu-item-description">經典焦糖風味搭配絲滑奶泡，限時特價</p>
+                <p class="menu-item-price">$120</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="../薑餅摩卡.jpg" alt="薑餅摩卡">
+            <div class="menu-item-details">
+                <p class="menu-item-title">薑餅摩卡</p>
+                <p class="menu-item-description">濃郁巧克力與薑餅香氣，暖心冬季特調</p>
+                <p class="menu-item-price">$160</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="../南瓜香料拿鐵.jpg" alt="南瓜香料拿鐵">
+            <div class="menu-item-details">
+                <p class="menu-item-title">南瓜香料拿鐵</p>
+                <p class="menu-item-description">經典秋季風味，香濃南瓜和溫暖香料的完美結合</p>
+                <p class="menu-item-price">$150</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="拿鐵.jpg" alt="拿鐵">
+            <div class="menu-item-details">
+                <p class="menu-item-title">拿鐵</p>
+                <p class="menu-item-description">濃郁咖啡與順滑牛奶完美結合</p>
+                <p class="menu-item-price">$150</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="卡布奇諾.jpg" alt="卡布奇諾">
+            <div class="menu-item-details">
+                <p class="menu-item-title">卡布奇諾</p>
+                <p class="menu-item-description">濃厚咖啡與奶泡的完美平衡</p>
+                <p class="menu-item-price">$160</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 蛋糕區 -->
+    <section class="category">
+        <h2><a href="Cake/cake.html" class="menu-link">蛋糕</a></h2>
+        <div class="menu-item">
+            <img src="水果蛋糕.jpg" alt="水果蛋糕">
+            <div class="menu-item-details">
+                <p class="menu-item-title">水果蛋糕</p>
+                <p class="menu-item-description">新鮮水果與輕盈蛋糕，完美搭配</p>
+                <p class="menu-item-price">$200</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="紅絲絨蛋糕.jpg" alt="紅絲絨蛋糕">
+            <div class="menu-item-details">
+                <p class="menu-item-title">紅絲絨蛋糕</p>
+                <p class="menu-item-description">獨特的紅色外觀與奶油霜</p>
+                <p class="menu-item-price">$220</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="巧克力蛋糕.jpg" alt="巧克力蛋糕">
+            <div class="menu-item-details">
+                <p class="menu-item-title">巧克力蛋糕</p>
+                <p class="menu-item-description">濃郁巧克力味道，搭配奶油霜</p>
+                <p class="menu-item-price">$150</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="芝士蛋糕.jpg" alt="芝士蛋糕">
+            <div class="menu-item-details">
+                <p class="menu-item-title">芝士蛋糕</p>
+                <p class="menu-item-description">柔滑奶酪與餅底的絕妙組合</p>
+                <p class="menu-item-price">$180</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 麵包區 -->
+    <section class="category">
+        <h2><a href="Bread/bread.html" class="menu-link">麵包</a></h2>
+        <div class="menu-item">
+            <img src="法國麵包.jpg" alt="法國麵包">
+            <div class="menu-item-details">
+                <p class="menu-item-title">法國麵包</p>
+                <p class="menu-item-description">外脆內軟，適合搭配咖啡</p>
+                <p class="menu-item-price">$50</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="可頌.jpg" alt="可頌">
+            <div class="menu-item-details">
+                <p class="menu-item-title">可頌</p>
+                <p class="menu-item-description">香酥可頌，完美的早餐選擇</p>
+                <p class="menu-item-price">$70</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

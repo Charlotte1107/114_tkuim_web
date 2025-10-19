@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f1e8;
+            color: #5a4636;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #8b5e3c;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #c24e3a;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #8b5e3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>聯絡我們</h1>
+
+        <!-- 聯絡方式區 -->
+        <div class="section">
+            <h2 class="section-title">聯絡資訊</h2>
+            <p><strong>電話：</strong>(02) 1234-5678</p>
+            <p><strong>電子郵件：</strong>contact@yourshop.com</p>
+            <p><strong>地址：</strong>台北市大安區仁愛路四段123號</p>
+        </div>
+
+        <!-- 線上詢問區 -->
+        <div class="section">
+            <h2 class="section-title">線上詢問</h2>
+            <p>有任何問題或需要進一步資訊？請隨時透過下方表格聯繫我們。我們的客服團隊將在24小時內回覆您的訊息。</p>
+            <form class="contact-form">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">電子郵件</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">訊息</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">送出</button>
+            </form>
+        </div>
+
+        <!-- 常見問題區 -->
+        <div class="section">
+            <h2 class="section-title">常見問題</h2>
+            <p>在這裡可以找到一些常見的問題和解答，包括我們的服務、營業時間、產品資訊等。如有其他疑問，請隨時與我們聯繫。</p>
+            <ul>
+                <li><strong>我們提供哪些種類的咖啡豆？</strong> 我們的咖啡豆有哥倫比亞、衣索比亞與肯亞等多種選擇，且皆為每日小批量烘焙。</li>
+                <li><strong>店內商品是否可以外帶？</strong> 是的，我們的咖啡及周邊商品均可外帶。</li>
+                <li><strong>是否接受預訂？</strong> 我們接受電話與線上預訂，請提前與我們聯絡。</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

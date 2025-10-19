@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>網站地圖</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f7f4;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 自我介紹區塊樣式 */
+        h1 {
+            text-align: center;
+            color: #3a3a3a;
+            font-size: 2.2em;
+        }
+
+        section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e8e6e3;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 8px;
+            font-size: 1.1em;
+        }
+
+        /* 網站架構區塊 */
+        nav {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 1.8em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3a8daa;
+        }
+
+        a:hover {
+            color: #d9534f;
+        }
+
+        /* 子項目縮排 */
+        ul ul {
+            padding-left: 20px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <h1>網站地圖</h1>
+
+    <!-- 自我介紹區 -->
+    <section>
+        <p>姓名：利蓁琳</p>
+        <p>學號：412630096</p>
+        <p>班級：資管二C</p>
+    </section>
+
+    <!-- 子頁面區 -->
+    <nav>
+        <h2>網站架構</h2>
+        <ul><li><h3><a href="index.html">首頁</a><h3></li><ul>
+        <ul>
+            <!-- 子頁一 -->
+            <li><h4><a href="Brand/brand.html">品牌故事-品牌初衷<h4></a>
+                <ul>
+                    <li><h5><a href="Brand/Goods/goods.html">周邊商品-商品介紹</a><h5></li>
+                    <li><h5><a href="Brand/Aboutus/aboutus.html">營業資訊-營業時間地址<h5></a></li>
+                    <li><h5><a href="Brand/COntact/contact.html">聯絡我們-聯絡資訊</a><h5></li>
+                </ul>
+            </li>
+            
+            <!-- 子頁二 -->
+            <li><h4><a href="Menu/menu.html">菜單-所有產品介紹<h4></a>
+                <ul>
+                    <li><h5><a href="Menu/Coffee/coffee.html">飲料/咖啡原料介紹-原料來源及熱量</a><h5></li>
+                    <li><h5><a href="Menu/Cake/cake.html">蛋糕原料介紹-原料來源及熱量</a><h5></li>
+                    <li><h5><a href="Menu/Bread/bread.html">麵包原料介紹-原料來源及熱量</a><h5></li>
+                </ul>
+            </li>
+            
+            <!-- 子頁三 -->
+            <li><h4><a href="Member/member.html">會員專區-會員專屬優惠資訊<h4></a>
+                <ul>
+                    <li><h5><a href="Member/Join_member/join_member.php">加入會員-成為會員<h5></a></li>
+                    <li><h5><a href="Member/Shop/shop.html">網路購買咖啡豆-購買表單<h5></a></li>
+                    <li><h5><a href="Member/Benefits/benefits.html">近期會員活動-活動內容<h5></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

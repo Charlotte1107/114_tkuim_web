@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>成為遊戲會員</title>
+	<style>
+		body {
+			background-color: #87CEEB;
+			font-family: 'Arial', sans-serif;
+			margin: 0;
+			padding: 0;
+			color: #333;
+		}
+		nav {
+			background-color: #4682B4;
+			padding: 10px 0;
+			text-align: center;
+		}
+		nav a {
+			color: white;
+			margin: 0 15px;
+			text-decoration: none;
+			font-size: 16px;
+		}
+		nav a:hover {
+			text-decoration: underline;
+		}
+		.container {
+			max-width: 800px;
+			margin: 30px auto;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.9);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		h2 {
+			text-align: center;
+			color: #2E8B57;
+			font-size: 24px;
+		}
+		form {
+			font-size: 16px; /* 調整表單文字大小 */
+		}
+		.form-row {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.form-row label {
+			width: 150px;
+			font-size: 16px; /* 調整標籤文字大小 */
+			font-weight: bold;
+		}
+		.form-row input, .form-row select {
+			flex: 1;
+			padding: 8px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.radio-group {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+		.radio-label {
+			font-weight: bold;
+			margin-right: 10px;
+			font-size: 16px; /* 增加文字大小 */
+		}
+		.form-actions {
+			text-align: center;
+			margin-top: 20px;
+		}
+		input[type="submit"], input[type="reset"] {
+			background-color: #4682B4;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		input[type="submit"]:hover, input[type="reset"]:hover {
+			background-color: #2E8B57;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="index.php">首頁</a>
+		<a href="5.php">關於</a>
+		<a href="2.html">宗介介紹</a>
+		<a href="3.php">藤本介紹</a>
+		<a href="4.php">波妞介紹</a>
+	</nav>
+	
+	<div class="container">
+		<h2>遊戲會員註冊</h2>
+		<form action="1.php" method="get">
+			<div class="form-row">
+				<label for="name">姓名:</label>
+				<input type="text" id="name" name="name">
+			</div>
+			<div class="form-row">
+				<label for="password">密碼:</label>
+				<input type="password" id="password" name="password">
+			</div>
+			<div class="form-row">
+				<label for="num">電話:</label>
+				<input type="text" id="num" name="num">
+			</div>
+			<div class="form-row">
+				<label class="radio-label">幫自己選個頭像吧!:</label>
+				<div class="radio-group">
+					<input type="radio" name="me" value="ponyo.jpg"> 波妞
+					<input type="radio" name="me" value="sosuke.jpg"> 宗介
+				</div>
+			</div>
+			<div class="form-row">
+				<label class="radio-label">喜愛角色程度分級:</label>
+			</div>
+			<div class="form-row">
+				<label>第一名:</label>
+				<select name="love1">
+					<option value="1">波妞</option>
+					<option value="2">宗介</option>
+					<option value="3">曼瑪璉</option>
+					<option value="4">理莎</option>
+				</select>
+			</div>
+			<div class="form-row">
+				<label>第二名:</label>
+				<select name="love2">
+					<option value="1">波妞</option>
+					<option value="2">宗介</option>
+					<option value="3">曼瑪璉</option>
+					<option value="4">理莎</option>
+				</select>
+			</div>
+			<div class="form-row">
+				<label>第三名:</label>
+				<select name="love3">
+					<option value="1">波妞</option>
+					<option value="2">宗介</option>
+					<option value="3">曼瑪璉</option>
+					<option value="4">理莎</option>
+				</select>
+			</div>
+			<div class="form-row">
+				<label>第四名:</label>
+				<select name="love4">
+					<option value="1">波妞</option>
+					<option value="2">宗介</option>
+					<option value="3">曼瑪璉</option>
+					<option value="4">理莎</option>
+				</select>
+			</div>
+			<div class="form-row">
+				<label class="radio-label">找尋桌布:</label>
+				<div class="radio-group">
+					<input type="radio" name="background" value="https://www.pinterest.com/search/pins/?q=波妞桌布"> 波妞桌布
+					<input type="radio" name="background" value="https://www.pinterest.com/search/pins/?q=宗介桌布"> 宗介桌布
+				</div>
+			</div>
+			<div class="form-actions">
+				<input type="submit" value="送出" name="sub">
+				<input type="reset" value="重填">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
