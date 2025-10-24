@@ -22,7 +22,7 @@ function gradeFrom(avg) {
 var name = prompt('請輸入姓名：');
 if (!name) name = '同學';
 
-// 五科（你也可以改成你要的科目名稱）
+// 五科
 var subjects = ['國文', '英文', '數學', '自然', '社會'];
 var scores = [];
 var invalid = false;
