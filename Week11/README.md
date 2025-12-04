@@ -8,12 +8,14 @@ Week11/
  ├─ docker/
  │    ├─ docker-compose.yml
  │    ├─ mongo-init.js
+ |    ├─ mongo-data/
  ├─ server/
  │    ├─ app.js
  │    ├─ db.js
  │    ├─ repositories/
  │    ├─ routes/
  │    ├─ .env
+ │    ├─package.json
  ├─ tests/
  │    ├─ api.http
  ├─ images/  ←（放截圖用）
@@ -56,6 +58,9 @@ show collections
 ```
 mongodb://week11-user:week11-pass@localhost:27017/week11?authSource=week11
 ```
+*測試截圖 
+![api-tests](images/螢幕擷取畫面%202025-11-24%20114943.png)
+![api-tests](images/螢幕擷取畫面%202025-11-25%20144210.png)
 
 ---
 
@@ -253,3 +258,29 @@ http://localhost:3001/api/signup
 ### 十一、CRUD 解釋
 是操作資料庫的基本動作，Create (建立/新增)、Read (讀取/查詢)、Update (更新/修改)、Delete (刪除)
 
+---
+
+### 十二、常見問題
+#### 1. MongoDB 連線失敗？
+
+請確認：
+
+- Docker 已啟動 → docker ps
+
+- MONGODB_URI 正確
+
+- mongo-init.js 是否成功建立使用者
+
+#### 2. CORS 錯誤？
+
+請確認 .env 的：
+```
+ALLOWED_ORIGIN=http://127.0.0.1:5500
+```
+
+#### 3. REST Client 回傳 404？
+
+請確認 server 是否啟動：
+```
+npm run dev
+```
