@@ -1,0 +1,8 @@
+ db.participants.createIndex({ email: 1 }, { unique: true })
+db.participants.deleteOne({ email: "new@example.com" })
+db.participants.createIndex({ email: 1 }, { unique: true })
+use week11
+db.participants.createIndex({ email: 1 }, { unique: true })
+use Week11
+db.participants.createIndex({ email: 1 }, { unique: true })
+use Week11
