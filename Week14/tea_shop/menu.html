@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our complete menu with pricing for all tea beverages and locations.">
+  <title>Menu - Tea Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">TEA SHOP</a>
+      <nav>
+        <ul>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="drinks.html">Tea Introduction</a></li>
+          <li><a href="card.html">Store Card</a></li>
+          <li class="lang-switch">EN / 中</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MENU PAGE ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-subtitle">MENU</div>
+      <h1 class="section-title">Beverage Selection</h1>
+
+      <!-- Location Filter -->
+      <div class="menu-filters">
+        <button class="menu-filter-btn active" data-location="taipei">Taipei & Islands</button>
+        <button class="menu-filter-btn" data-location="other">Other Regions</button>
+        <button class="menu-filter-btn" data-location="mall">Department Stores</button>
+        <button class="menu-filter-btn" data-location="service">Service Areas</button>
+      </div>
+
+      <!-- Menu Content Wrapper -->
+      <div class="menu-wrapper">
+        <!-- Left Section - Image Placeholder -->
+        <div class="menu-left">
+          Menu Visual Area
+        </div>
+
+        <!-- Right Section - Menu Items -->
+        <div class="menu-right">
+          <!-- TAIPEI & ISLANDS -->
+          <div class="menu-content active" data-location="taipei">
+            <!-- Seasonal Limited -->
+            <div class="menu-category">
+              <h3 class="menu-category-title">Seasonal Limited</h3>
+              <div class="menu-items-list" id="taipei-seasonal">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Classic Teas -->
+            <div class="menu-category">
+              <h3 class="menu-category-title">Classic Teas</h3>
+              <div class="menu-items-list" id="taipei-classic">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER REGIONS -->
+          <div class="menu-content" data-location="other">
+            <div class="menu-category">
+              <h3 class="menu-category-title">Special Selection</h3>
+              <div class="menu-items-list" id="other-items">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- DEPARTMENT STORES -->
+          <div class="menu-content" data-location="mall">
+            <div class="menu-category">
+              <h3 class="menu-category-title">Premium Selection</h3>
+              <div class="menu-items-list" id="mall-items">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE AREAS -->
+          <div class="menu-content" data-location="service">
+            <div class="menu-category">
+              <h3 class="menu-category-title">Travel Specials</h3>
+              <div class="menu-items-list" id="service-items">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Download Menu -->
+          <div class="menu-download">
+            <p>Need a printed menu?</p>
+            <a href="#" class="btn btn-primary">Download Full Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Tea Shop</h4>
+          <p>We are dedicated to providing the finest tea beverage experience. Our carefully selected tea leaves are crafted with modern techniques.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Information</h4>
+          <p>Phone: (02) 1234-5678<br>
+          Email: info@teashop.com<br>
+          Hours: 10:00 - 22:00</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Instagram: @teashop<br>
+          Line: @teashop</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Tea Shop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="menu.html" class="fixed-menu-btn">MENU</a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Menu data
+    const menuData = {
+      taipei: {
+        seasonal: [
+          { name: 'Caramel Cinnamon Latte', medium: 65, large: 75 },
+          { name: 'Autumn Oolong Tea', medium: 55, large: 65 },
+          { name: 'Matcha Cream', medium: 68, large: 78 },
+          { name: 'Honey Black Tea', medium: 60, large: 70 },
+          { name: 'Rose Latte', medium: 62, large: 72 },
+          { name: 'Brown Sugar Milk Tea', medium: 58, large: 68 }
+        ],
+        classic: [
+          { name: 'Classic Milk Tea', medium: 50, large: 60 },
+          { name: 'Iced Black Tea', medium: 45, large: 55 },
+          { name: 'Soybean Milk Tea', medium: 55, large: 65 },
+          { name: 'Honey Lemon Tea', medium: 58, large: 68 },
+          { name: 'White Jade Milk Tea', medium: 52, large: 62 },
+          { name: 'Green Tea Latte', medium: 48, large: 58 },
+          { name: 'Assam Milk Tea', medium: 50, large: 60 },
+          { name: 'Oolong Tea', medium: 45, large: 55 }
+        ]
+      },
+      other: [
+        { name: 'Taiwan High Mountain Tea', medium: 52, large: 62 },
+        { name: 'Clear Pu-erh Tea', medium: 48, large: 58 },
+        { name: 'Premium Oolong', medium: 50, large: 60 }
+      ],
+      mall: [
+        { name: 'Premium Milk Tea Upgrade', medium: 70, large: 80 },
+        { name: 'Select Black Tea Cream Top', medium: 72, large: 82 }
+      ],
+      service: [
+        { name: 'Journey Milk Tea', medium: 55, large: 65 },
+        { name: 'Quick Frozen Lemon Tea', medium: 52, large: 62 }
+      ]
+    };
+
+    // Render menu items
+    function renderMenuItem(item) {
+      return `
+        <div class="menu-item-row">
+          <div class="menu-item-name">${item.name}</div>
+          <div class="menu-price-item">
+            <div class="menu-price-size">Medium</div>
+            <div class="menu-price-value">$${item.medium}</div>
+          </div>
+          <div class="menu-price-item">
+            <div class="menu-price-size">Large</div>
+            <div class="menu-price-value">$${item.large}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize menu
+    function initMenu() {
+      // Taipei
+      document.getElementById('taipei-seasonal').innerHTML = menuData.taipei.seasonal.map(renderMenuItem).join('');
+      document.getElementById('taipei-classic').innerHTML = menuData.taipei.classic.map(renderMenuItem).join('');
+      
+      // Other locations
+      document.getElementById('other-items').innerHTML = menuData.other.map(renderMenuItem).join('');
+      document.getElementById('mall-items').innerHTML = menuData.mall.map(renderMenuItem).join('');
+      document.getElementById('service-items').innerHTML = menuData.service.map(renderMenuItem).join('');
+
+      // Add event listeners
+      document.querySelectorAll('.menu-filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.menu-filter-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.menu-content').forEach(c => c.classList.remove('active'));
+          
+          this.classList.add('active');
+          const location = this.dataset.location;
+          document.querySelector(`.menu-content[data-location="${location}"]`).classList.add('active');
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initMenu);
+  </script>
+</body>
+</html>

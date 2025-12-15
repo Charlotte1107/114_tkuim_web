@@ -1,0 +1,144 @@
+/* ==================== DRINKS PAGE STYLES ==================== */
+
+.drinks-filter {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.drinks-filter-btn {
+  padding: 0.7rem 1.8rem;
+  border: 1px solid var(--accent-gold);
+  background-color: transparent;
+  color: var(--accent-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-family: Georgia, serif;
+}
+
+.drinks-filter-btn:hover,
+.drinks-filter-btn.active {
+  background-color: var(--accent-gold);
+  color: #f0f0f0;
+}
+
+.drinks-content {
+  display: none;
+}
+
+.drinks-content.active {
+  display: grid;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.drink-card {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.drink-image-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  height: 250px;
+}
+
+.drink-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 77, 92, 0.12), rgba(201, 168, 118, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.drink-card:hover .drink-image {
+  background: linear-gradient(135deg, rgba(26, 77, 92, 0.2), rgba(201, 168, 118, 0.2));
+  transform: scale(1.05);
+}
+
+.drink-name {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.8rem;
+  font-weight: normal;
+  min-height: 2.4em;
+}
+
+.drink-description {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.drink-card {
+  padding: 0;
+  background-color: var(--white);
+}
+
+.drink-card:hover {
+  box-shadow: 0 10px 25px rgba(26, 77, 92, 0.12);
+  transform: translateY(-8px);
+}
+
+/* ==================== RWD DESIGNS ==================== */
+
+@media (max-width: 1024px) {
+  .drinks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .drinks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .drinks-filter {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .drinks-filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .drink-image-container {
+    height: 180px;
+  }
+
+  .drink-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .drinks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-image-container {
+    height: 200px;
+  }
+
+  .drink-name {
+    font-size: 0.95rem;
+  }
+
+  .drink-description {
+    font-size: 0.8rem;
+  }
+}
