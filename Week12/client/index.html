@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>登入</title>
+</head>
+<body>
+
+  <h2>登入</h2>
+
+  <form id="loginForm">
+    <div>
+      <label>Email：</label>
+      <input id="email" type="email" required>
+    </div>
+
+    <div>
+      <label>密碼：</label>
+      <input id="password" type="password" required>
+    </div>
+
+    <button type="submit">登入</button>
+  </form>
+
+  <p id="loading" style="display:none;">登入中...</p>
+  <p id="error" style="color:red;"></p>
+
+  <!-- 一定要放在 body 最後 -->
+  <script src="login.js"></script>
+</body>
+</html>

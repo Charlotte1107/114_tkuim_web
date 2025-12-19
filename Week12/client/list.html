@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>參與者清單</title>
+</head>
+<body>
+
+  <h2>參與者清單</h2>
+
+  <button id="logoutBtn">登出</button>
+
+  <p id="loading">資料載入中...</p>
+  <p id="error" style="color:red;"></p>
+
+  <ul id="list"></ul>
+  <p>
+  目前登入：
+  <span id="currentUser"></span>
+  </p>
+  <section id="createSection">
+  <h3>新增參與者</h3>
+  <form id="createForm">
+    <input id="name" placeholder="姓名">
+    <input id="email" placeholder="Email">
+    <button type="submit">新增</button>
+    <p id="formError"></p>
+  </form>
+</section>
+
+
+
+
+<p id="formError" style="color:red;"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>

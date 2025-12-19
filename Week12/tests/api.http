@@ -1,0 +1,80 @@
+@STUDENT_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQ0MDE5ZTA0ODYzNjc2ZTBlYWE5NGMiLCJlbWFpbCI6InN0dWRlbnRAZXhhbXBsZS5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc2NjA3MDkzOSwiZXhwIjoxNzY2MDc4MTM5fQ.7-nBFR_jzwuUHGLbbZcSmbO9jok-RTXuoU7pxucFdBs
+@A_ID=69441ac1ca294b35b4e1eb30
+
+@ADMIN_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQ0MGU3ZmJkM2IzOTJhM2Y5ZGMyOWUiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY2MDcwOTkxLCJleHAiOjE3NjYwNzgxOTF9.WIrZEfiYvmSAVmIz74n-Nd29nwCbBjCWEL1uQ4EQ8mo
+
+@B_ID=69441b1bca294b35b4e1eb31
+### 註冊
+POST http://localhost:3001/auth/signup
+Content-Type: application/json
+
+{
+  "email": "student1@example.com",
+  "password": "pass1234"
+}
+
+### student login
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "pass1234"
+}
+
+### admin login
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin1234"
+}
+
+### student 建立資料 A
+POST http://localhost:3001/api/signup
+Authorization: Bearer {{STUDENT_TOKEN}}
+Content-Type: application/json
+
+{
+  "name": "學生資料 A",
+  "email": "a@example.com",
+  "phone": "0911111111"
+}
+
+### admin 建立資料 B
+POST http://localhost:3001/api/signup
+Authorization: Bearer {{ADMIN_TOKEN}}
+Content-Type: application/json
+
+{
+  "name": "管理員資料 B",
+  "email": "b@example.com",
+  "phone": "0922222222"
+}
+
+###  student 刪 admin 的資料（應該失敗）
+DELETE http://localhost:3001/api/signup/{{B_ID}}
+Authorization: Bearer {{STUDENT_TOKEN}}
+
+###  student 刪自己的資料
+DELETE http://localhost:3001/api/signup/{{A_ID}}
+Authorization: Bearer {{STUDENT_TOKEN}}
+
+###  admin 刪 student 的資料
+DELETE http://localhost:3001/api/signup/{{A_ID}}
+Authorization: Bearer {{ADMIN_TOKEN}}
+
+### student看資料
+GET http://localhost:3001/api/signup
+Authorization: Bearer {{STUDENT_TOKEN}}
+
+### admin看資料
+GET http://localhost:3001/api/signup
+Authorization: Bearer {{ADMIN_TOKEN}}
+
+
+###不帶token
+GET http://localhost:3001/api/signup
+
+

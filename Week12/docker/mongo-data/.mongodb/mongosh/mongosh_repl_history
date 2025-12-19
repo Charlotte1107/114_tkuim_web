@@ -1,0 +1,38 @@
+db.users.find({ role: "admin" })
+})
+  createdAt: new Date()
+  role: "admin",
+  passwordHash: "$2b$10$TRjjq4Aq6Kb/2jsyKO1yP.yX8nTV37pZLxCmP1B3.x7WpHoKckZBq",
+  email: "admin@example.com",
+db.users.insertOne({
+use week12
+db.users.find({ role: "admin" })
+})
+  createdAt: new Date()
+  role: "admin",
+  passwordHash: "$2b$10$TRjjq4Aq6Kb/2jsyKO1yP.yX8nTV37pZLxCmP1B3.x7WpHoKckZBq",
+  email: "admin@example.com",
+db.users.insertOne({
+use Week12
+show dbs
+mongosh
+show collections
+use week12
+docker compose down -v
+show dbs
+db.users.find().pretty()
+show collections
+use week12
+cd ..
+docker exec -it week12-mongo mongosh -u root -p password123 --authenticationDatabase admin
+db.users.find().pretty()
+show collections
+use week12
+ db.participants.createIndex({ email: 1 }, { unique: true })
+db.participants.deleteOne({ email: "new@example.com" })
+db.participants.createIndex({ email: 1 }, { unique: true })
+use week11
+db.participants.createIndex({ email: 1 }, { unique: true })
+use Week11
+db.participants.createIndex({ email: 1 }, { unique: true })
+use Week11
